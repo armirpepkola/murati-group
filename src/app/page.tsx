@@ -5,7 +5,7 @@ import ServicesPreview from '@/components/home/ServicesPreview';
 import ProjectsPreview from '@/components/home/ProjectsPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import Testimonials from '@/components/home/Testimonials';
-// import CTA from '@/components/home/CTA';
+import CTA from '@/components/home/CTA';
 
 export const metadata: Metadata = {
   title: 'Murati Group | Construction Company in London',
@@ -21,7 +21,7 @@ export default function HomePage() {
       <ProjectsPreview />
       <WhyChooseUs />
       <Testimonials />
-      {/* <CTA /> */}
+      <CTA />
     </main>
   );
 }
