@@ -40,12 +40,24 @@ const featuredTestimonial: Testimonial = {
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#f9f9f9] py-20 px-6">
+    <section className="bg-white py-40 px-6">
       <div className="max-w-7xl mx-auto mb-12 text-center">
         <h2 className="text-3xl uppercase font-bold text-[#4a5261]">What Our Clients Say</h2>
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+
+        {/* Right 1/3: Featured Testimonial */}
+        <div className="bg-[#4a5261] text-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+          <div className="text-lg leading-relaxed italic mb-6">
+            {featuredTestimonial.quote}
+          </div>
+          <div>
+            <div className="font-bold text-[#e25858]">{featuredTestimonial.name}</div>
+            <div className="text-sm text-gray-300">{featuredTestimonial.role}</div>
+          </div>
+        </div>
+
         {/* Left 2/3: Grid Testimonials */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
           {gridTestimonials.map((testimonial, index) => (
@@ -58,17 +70,6 @@ const Testimonials = () => {
               <div className="text-sm text-gray-500">{testimonial.role}</div>
             </div>
           ))}
-        </div>
-
-        {/* Right 1/3: Featured Testimonial */}
-        <div className="bg-[#4a5261] text-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
-          <div className="text-lg leading-relaxed italic mb-6">
-            {featuredTestimonial.quote}
-          </div>
-          <div>
-            <div className="font-bold text-[#e25858]">{featuredTestimonial.name}</div>
-            <div className="text-sm text-gray-300">{featuredTestimonial.role}</div>
-          </div>
         </div>
       </div>
     </section>

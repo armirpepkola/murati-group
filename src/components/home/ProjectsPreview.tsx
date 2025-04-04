@@ -37,12 +37,12 @@ export default function ProjectPreview() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="px-6 md:px-16 py-24 bg-[#f9f9f9]">
-      <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
+    <section className="px-6 md:px-16 py-40 bg-[#f9f9f9]">
+      <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
         {/* LEFT COLUMN */}
         <div>
           <p className="text-[#e25858] uppercase text-sm font-bold tracking-wide mb-2">Projects</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#4a5261] mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold text-[#4a5261] mb-4 uppercase">
             Building Landmarks, <br className="hidden md:block" />
             One Structure at a Time
           </h2>
@@ -52,7 +52,7 @@ export default function ProjectPreview() {
 
           <Link
             href="/projects"
-            className="inline-block px-8 py-4 uppercase bg-[#4a5261] text-white text-sm font-bold rounded hover:bg-opacity-90 transition"
+            className="inline-block px-6 py-3 uppercase bg-[#4a5261] text-white text-sm font-bold hover:bg-opacity-90 transition"
           >
             View All Projects
           </Link>
@@ -91,7 +91,7 @@ export default function ProjectPreview() {
           </div>
 
           {/* Arrows */}
-          <div className="flex gap-6 mt-4">
+          <div className="flex gap-6">
             <button
               onClick={scrollPrev}
               className="text-[#4a5261] font-bold text-lg hover:opacity-70 transition"

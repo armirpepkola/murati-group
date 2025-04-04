@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full bg-[#4a5261] text-white overflow-hidden">
+    <section className="relative h-screen w-full bg-[#4a5261] text-white overflow-hidden -mt-25">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

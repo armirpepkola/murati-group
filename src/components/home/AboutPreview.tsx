@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AboutPreview = () => {
   return (
-    <section className="py-20 px-4 sm:px-8 lg:px-16 bg-white">
+    <section className="py-32 px-4 sm:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE – Text */}
         <div>

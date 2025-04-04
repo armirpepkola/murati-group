@@ -42,13 +42,13 @@ const cardVariants = {
 const ServicesPreview = () => {
   return (
     <section
-      className="relative pt-20 pb-32 px-8 bg-cover bg-center"
+      className="relative py-32 px-8 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/hero.jpg')" }}
     >
       <div className="absolute inset-0 bg-white/70 backdrop-blur-md z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-5xl font-bold text-[#4a5261] mb-4">Our Services</h2>
+        <h2 className="text-4xl font-bold text-[#4a5261] mb-4 uppercase">Our Services</h2>
         <p className="text-lg text-[#4a5261] max-w-2xl mx-auto">
           We bring your vision to life with innovative, tailored solutions.
         </p>

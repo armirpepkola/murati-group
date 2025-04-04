@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <>
       {/* Top Tier */}
-      <div className="w-full bg-gray-100 px-16 py-2">
+      <div className="w-full bg-gray-100 px-16 py-2 z-49">
         <div className="flex justify-between text-sm text-[#4a5261]">
           <div className="flex space-x-2">
             <span>For inquiries or projects send us your documents at:</span>
@@ -59,8 +59,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Thin Ruler */}
-      <div className="w-full h-0.5 bg-gray-300"></div>
+      <div className="w-full h-0.5 bg-gray-300 z-50"></div>
 
       {/* Main Header */}
       <header

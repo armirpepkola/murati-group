@@ -16,8 +16,8 @@ export default function CTA() {
             priority
           />
           <div className="absolute inset-0 bg-black/40" />
-          <div className="relative z-10 h-full flex items-center justify-center text-white px-10">
-            <h2 className="text-4xl font-bold">Placeholder Heading</h2>
+          <div className="relative z-10 h-full flex items-center justify-start text-white pl-40">
+            <h2 className="text-4xl font-bold uppercase">Murati Group</h2>
           </div>
         </div>
 
@@ -28,11 +28,11 @@ export default function CTA() {
                 <p className="text-sm font-semibold uppercase text-gray-500 mb-3">
                     Let’s Talk
                 </p>
-                <h3 className="text-3xl font-bold text-[#4a5261] mb-8 leading-snug">
+                <h3 className="text-3xl font-bold text-[#4a5261] mb-5 leading-snug">
                     Need to reach us?
                 </h3>
-                <button className="bg-[#e25858] text-white font-bold uppercase px-6 py-3 text-sm tracking-wide">
-                    Contact Us
+                <button className="self-start bg-[#e25858] hover:bg-[#cc4646] text-white font-bold uppercase px-4 py-2 text-sm tracking-wide cursor-pointer transition-transform duration-200 hover:scale-105">
+                  Get in touch
                 </button>
             </div>
         </div>

@@ -27,7 +27,7 @@ const highlights = [
 const WhyChooseUs = () => {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-20 px-4 sm:px-8 lg:px-16"
+      className="relative bg-cover bg-center bg-no-repeat py-32 px-4 sm:px-8 lg:px-16"
       style={{ backgroundImage: `url('/images/hero.jpg')` }}
     >
       {/* Overlay */}
