@@ -26,15 +26,24 @@ const highlights = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-[#f9f9f9] py-16 px-4 sm:px-8 lg:px-16">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-[#4a5261] mb-12">Why Choose Us</h2>
+    <section
+      className="relative bg-cover bg-center bg-no-repeat py-20 px-4 sm:px-8 lg:px-16"
+      style={{ backgroundImage: `url('/images/hero.jpg')` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-condensed font-bold text-[#4a5261] mb-12 uppercase">
+          Why Choose Us
+        </h2>
         <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {highlights.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               <div className="mb-4">{item.icon}</div>
               <h3 className="text-lg font-semibold text-[#4a5261]">{item.title}</h3>
-              <p className="text-sm text-gray-600 mt-2">{item.description}</p>
+              <p className="text-sm text-gray-700 mt-2">{item.description}</p>
             </div>
           ))}
         </div>

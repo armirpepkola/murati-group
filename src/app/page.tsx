@@ -4,7 +4,7 @@ import AboutPreview from '@/components/home/AboutPreview';
 import ServicesPreview from '@/components/home/ServicesPreview';
 import ProjectsPreview from '@/components/home/ProjectsPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-// import Testimonials from '@/components/home/Testimonials';
+import Testimonials from '@/components/home/Testimonials';
 // import CTA from '@/components/home/CTA';
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function HomePage() {
       <ServicesPreview />
       <ProjectsPreview />
       <WhyChooseUs />
-      {/* <Testimonials /> */}
+      <Testimonials />
       {/* <CTA /> */}
     </main>
   );
