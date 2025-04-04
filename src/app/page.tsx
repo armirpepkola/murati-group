@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
 import Hero from '@/components/home/Hero';
 // Future imports:
-// import Features from '@/components/home/Features';
+import Features from '@/components/home/AboutPreview';
 // import ServicesPreview from '@/components/home/ServicesPreview';
 // import ProjectsPreview from '@/components/home/ProjectsPreview';
-// import WhyChooseUs from '@/components/home/WhyChooseUs';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
+import AboutPreview from '@/components/home/AboutPreview';
 // import Testimonials from '@/components/home/Testimonials';
 // import CTA from '@/components/home/CTA';
 
@@ -17,10 +18,10 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      {/* <Features /> */}
+      <AboutPreview />
       {/* <ServicesPreview /> */}
       {/* <ProjectsPreview /> */}
-      {/* <WhyChooseUs /> */}
+      <WhyChooseUs />
       {/* <Testimonials /> */}
       {/* <CTA /> */}
     </main>
