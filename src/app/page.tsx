@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Hero from '@/components/home/Hero';
 import AboutPreview from '@/components/home/AboutPreview';
 import ServicesPreview from '@/components/home/ServicesPreview';
-// import ProjectsPreview from '@/components/home/ProjectsPreview';
+import ProjectsPreview from '@/components/home/ProjectsPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 // import Testimonials from '@/components/home/Testimonials';
 // import CTA from '@/components/home/CTA';
@@ -18,7 +18,7 @@ export default function HomePage() {
       <Hero />
       <AboutPreview />
       <ServicesPreview />
-      {/* <ProjectsPreview /> */}
+      <ProjectsPreview />
       <WhyChooseUs />
       {/* <Testimonials /> */}
       {/* <CTA /> */}
