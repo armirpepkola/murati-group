@@ -1,15 +1,21 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import CTA from '@/components/home/CTA';
+import PageHero from '@/components/PageHero';
 
 export const metadata: Metadata = {
-    title: 'About Us | Murati Group',
-    description: 'Learn more about Murati Group and our construction values.',
+  title: 'Services',
+  description: 'Check out what services we can provide for you.',
 };
 
-export default function AboutPage() {
-    return (
-        <section className="max-w-5xl mx-auto p-8">
-            <h1 className="text-3xl font-bold mb-4">About Us</h1>
-            <p>We are Murati Group – experts in construction based in London.</p>
-        </section>
-    );
+export default function ProjectsPage() {
+  return (
+    <main className="flex flex-col">
+      <PageHero
+        title="What we can do for you"
+        subtitle="Services"
+        image="/images/hero.jpg"
+      />
+      <CTA />
+    </main>
+  );
 }

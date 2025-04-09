@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import ProjectsHero from '@/components/projects/ProjectsHero';
 import ProjectsGallery from '@/components/projects/ProjectsGallery';
 import CTA from '@/components/home/CTA';
+import PageHero from '@/components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Our Projects',
@@ -11,7 +11,11 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <main className="flex flex-col">
-      <ProjectsHero />
+      <PageHero
+        title="See some of our best works"
+        subtitle="Projects"
+        image="/images/hero.jpg"
+      />
       <ProjectsGallery />
       <CTA />
     </main>
