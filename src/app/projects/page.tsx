@@ -1,15 +1,19 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import ProjectsHero from '@/components/projects/ProjectsHero';
+import ProjectsGallery from '@/components/projects/ProjectsGallery';
+import CTA from '@/components/home/CTA';
 
 export const metadata: Metadata = {
-    title: 'About Us | Murati Group',
-    description: 'Learn more about Murati Group and our construction values.',
+  title: 'Our Projects',
+  description: 'Explore the latest construction projects delivered by Murati Group across London.',
 };
 
-export default function AboutPage() {
-    return (
-        <section className="max-w-5xl mx-auto p-8">
-            <h1 className="text-3xl font-bold mb-4">About Us</h1>
-            <p>We are Murati Group – experts in construction based in London.</p>
-        </section>
-    );
+export default function ProjectsPage() {
+  return (
+    <main className="flex flex-col">
+      <ProjectsHero />
+      <ProjectsGallery />
+      <CTA />
+    </main>
+  );
 }
