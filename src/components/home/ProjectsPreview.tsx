@@ -37,7 +37,7 @@ export default function ProjectPreview() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="px-6 md:px-16 py-40 bg-[#f9f9f9]">
+    <section className="px-6 md:px-16 py-32 bg-[#f9f9f9]">
       <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
         {/* LEFT COLUMN */}
         <div>

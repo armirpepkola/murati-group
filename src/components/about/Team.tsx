@@ -11,7 +11,7 @@ const team = [
 
 export default function Team() {
   return (
-    <section className="bg-[#f5f5f5] py-24 px-6">
+    <section className="bg-[#f5f5f5] py-32 px-6">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

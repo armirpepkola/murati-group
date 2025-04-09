@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Story() {
   return (
-    <section className="bg-white py-24 px-6">
+    <section className="bg-white py-32 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -40 }}

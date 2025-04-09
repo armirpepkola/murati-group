@@ -20,7 +20,7 @@ const values = [
 
 export default function Values() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-32 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         
         {/* Left: Image */}

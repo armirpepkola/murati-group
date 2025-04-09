@@ -40,7 +40,7 @@ const featuredTestimonial: Testimonial = {
 
 const Testimonials = () => {
   return (
-    <section className="bg-white py-40 px-6">
+    <section className="bg-white py-32 px-6">
       <div className="max-w-7xl mx-auto mb-12 text-center">
         <h2 className="text-3xl uppercase font-bold text-[#4a5261]">What Our Clients Say</h2>
       </div>

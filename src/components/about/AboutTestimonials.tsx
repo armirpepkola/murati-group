@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function AboutTestimonials() {
   return (
-    <section className="bg-[#4a5261] py-24 px-6 overflow-hidden mb-32">
+    <section className="bg-[#4a5261] py-32 px-6 overflow-hidden mb-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

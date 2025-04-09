@@ -9,7 +9,7 @@ export default function ProjectsGallery() {
   const [activeImages, setActiveImages] = useState<string[] | null>(null);
 
   return (
-    <section className="px-16 py-24 max-w-7xl mx-auto">
+    <section className="px-16 py-32 max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-[#4a5261] mb-12">Our Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

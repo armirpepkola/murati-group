@@ -31,7 +31,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#f9f9f9] to-[#ececec] px-6 py-24 sm:px-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f9f9f9] to-[#ececec] px-6 py-32 sm:px-16">
       <Toaster position="top-center" />
       {/* Background SVG noise */}
       <div
