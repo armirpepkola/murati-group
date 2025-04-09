@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from './Button'
 
 const navLinks = [
@@ -15,31 +15,26 @@ const navLinks = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
-  const [headerHeight, setHeaderHeight] = useState(0)
-  let lastScrollY = 0
+  const lastScrollY = useRef(0)
+  const ticking = useRef(false)
 
   useEffect(() => {
+    const updateScrollDirection = () => {
+      const currentY = window.scrollY
+      const goingUp = currentY < lastScrollY.current
+      setIsHeaderVisible(goingUp || currentY <= 0)
+      lastScrollY.current = currentY
+      ticking.current = false
+    }
+
     const handleScroll = () => {
-      if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY) {
-          // Scroll down -> hide the header
-          setIsHeaderVisible(false)
-        } else {
-          // Scroll up -> show the header
-          setIsHeaderVisible(true)
-        }
-        lastScrollY = window.scrollY <= 0 ? 0 : window.scrollY
+      if (!ticking.current) {
+        window.requestAnimationFrame(updateScrollDirection)
+        ticking.current = true
       }
     }
 
-    const headerElement = document.getElementById('header')
-    if (headerElement) {
-      setHeaderHeight(headerElement.offsetHeight)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    
-    // Cleanup the event listener when the component unmounts
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -50,7 +45,7 @@ export default function Header() {
         <div className="flex justify-between text-sm text-[#4a5261]">
           <div className="flex space-x-2">
             <span>For inquiries or projects send us your documents at:</span>
-            <a href="mailto:info@muratigroup.com" className="text-[#e25858]">
+            <a href="mailto:info@muratigroup.com" className="text-[#e25858] underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-[#e25858]">
               info@muratigroup.com
             </a>
           </div>
@@ -60,12 +55,12 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="w-full h-0.5 bg-gray-300 z-50"></div>
+      <div className="w-full h-0.5 bg-gray-300 z-50" aria-hidden="true"></div>
 
       {/* Main Header */}
       <header
         id="header"
-        className={`w-full bg-white shadow-md sticky top-0 z-50 transition-transform ${
+        className={`w-full bg-white shadow-md sticky top-0 z-50 transition-transform duration-300 ease-in-out ${
           isHeaderVisible ? 'transform-none' : '-translate-y-full'
         }`}
       >
@@ -82,31 +77,38 @@ export default function Header() {
             />
           </Link>
 
-          {/* Navigation (Desktop) */}
+          {/* Desktop Nav */}
           <nav
             role="navigation"
             aria-label="Main navigation"
-            className="flex-grow flex justify-center space-x-8 items-center uppercase"
+            className="hidden sm:flex flex-grow justify-center space-x-8 items-center uppercase"
           >
             {navLinks.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-[#4a5261] font-semibold hover:text-[#e25858] transition-colors"
+                className="relative text-[#4a5261] font-semibold transition-colors hover:text-[#e25858] 
+                          before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 
+                          before:bg-[#e25858] before:transition-all before:duration-300 hover:before:w-full"
               >
                 {label}
-              </Link>
+                </Link>             
             ))}
           </nav>
 
-          {/* Call-to-Action Button */}
-          <Button href="/services" variant="secondary">call an expert</Button>
+          {/* CTA */}
+          <div className="hidden sm:block">
+            <Button href="/services" variant="secondary">
+              call an expert
+            </Button>
+          </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle */}
           <button
-            className="sm:hidden p-2 text-[#4a5261] hover:text-[#e25858] transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Open mobile menu"
+            className="sm:hidden p-2 text-[#4a5261] hover:text-[#e25858] transition-colors focus:outline-none focus:ring-2 focus:ring-[#e25858]"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+            aria-expanded={isMobileMenuOpen}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,33 +117,28 @@ export default function Header() {
               stroke="currentColor"
               className="w-6 h-6"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="sm:hidden bg-white shadow-md py-4">
+        <nav role="navigation" aria-label="Mobile navigation" className="sm:hidden bg-white shadow-md py-4">
           <div className="max-w-7xl mx-auto px-4 space-y-4">
             {navLinks.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="block text-[#4a5261] font-semibold hover:text-[#e25858] transition-colors"
+                className="block text-[#4a5261] font-semibold hover:text-[#e25858] transition-colors focus:outline-none focus:ring-2 focus:ring-[#e25858]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {label}
               </Link>
             ))}
           </div>
-        </div>
+        </nav>
       )}
     </>
   )
