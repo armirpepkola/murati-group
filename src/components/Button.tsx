@@ -14,8 +14,11 @@ export const Button = ({
     className = "",
 }: ButtonProps) => {
     const baseStyles = `
-        relative inline-block uppercase font-semibold px-4 py-1.5 rounded-none shadow 
-        transition-all duration-300 overflow-hidden
+        relative inline-block uppercase font-semibold
+        px-3 sm:px-4 py-1.5
+        md:px-4 md:py-1.5
+        text-xs sm:text-sm md:text-base
+        rounded-none shadow transition-all duration-300 overflow-hidden
     `;
 
     const variantStyles =
@@ -27,7 +30,6 @@ export const Button = ({
         before:absolute before:inset-0 before:-translate-x-full before:bg-white/10 
         before:transition-transform before:duration-500 
         hover:before:translate-x-full
-
         hover:scale-[1.03] active:scale-[0.98]
     `;
 
