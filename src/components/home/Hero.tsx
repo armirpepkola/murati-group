@@ -14,22 +14,29 @@ export default function Hero() {
           fill
           priority
           className="object-cover object-center"
+          sizes="100vw"
         />
         {/* Darker Overlay */}
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}
-      <div className="section h-full flex flex-col relative z-10">
-        <div className="mt-auto mb-16 md:mb-24 lg:mb-32 max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-condensed font-bold leading-tight mb-8">
-            <span className="text-white uppercase">Superior results.</span>{' '}
-            <span className="font-normal text-white uppercase block md:inline">Great experience for everyone.</span>
+      <div className="section h-full flex flex-col relative z-10 px-4 sm:px-6 md:px-8 lg:px-16">
+        <div className="mt-auto mb-16 md:mb-24 lg:mb-32 max-w-full sm:max-w-xl md:max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-condensed font-bold leading-tight mb-6 sm:mb-8">
+            <span className="text-white uppercase block">Superior results.</span>
+            <span className="font-normal text-white uppercase block md:inline">
+              Great experience for everyone.
+            </span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/projects" variant="primary">see our work</Button>
-            <Button href="/services" variant="secondary">our services</Button>
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <Button href="/projects" variant="primary">
+              see our work
+            </Button>
+            <Button href="/services" variant="secondary">
+              our services
+            </Button>
           </div>
         </div>
       </div>

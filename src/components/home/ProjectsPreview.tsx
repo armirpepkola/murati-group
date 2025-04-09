@@ -37,47 +37,51 @@ export default function ProjectPreview() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="px-6 md:px-16 py-32 bg-[#f9f9f9]">
-      <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
+    <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-32 bg-[#f9f9f9] overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-center max-w-7xl mx-auto">
         {/* LEFT COLUMN */}
         <div>
           <p className="text-[#e25858] uppercase text-sm font-bold tracking-wide mb-2">Projects</p>
-          <h2 className="text-4xl md:text-4xl font-bold text-[#4a5261] mb-4 uppercase">
-            Building Landmarks, <br className="hidden md:block" />
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4a5261] mb-4 uppercase">
+            Building Landmarks,<br className="hidden md:block" />
             One Structure at a Time
           </h2>
-          <p className="text-gray-600 text-base md:text-lg mb-8">
+          <p className="text-base sm:text-lg text-gray-600 mb-8">
             We don’t just build — we transform. These are a few of our signature works across London that raised the bar.
           </p>
 
-          <Button href="/services" variant="secondary">view all projects</Button>
+          <Button href="/services" variant="secondary">
+            view all projects
+          </Button>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div>
+        <div className="flex flex-col gap-6">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
+            <div className="flex -ml-4 sm:-ml-0">
               {featuredProjects.map((project, idx) => (
                 <motion.div
                   key={project.slug}
-                  className="min-w-full md:min-w-[85%] pr-6 mb-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 + idx * 0.1 }}
+                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.5 + idx * 0.1 }}
+                  className="min-w-0 w-full md:min-w-[85%] flex-shrink-0 pl-4 sm:pl-0 pr-4"
                 >
                   <div className="bg-white rounded-2xl shadow-md overflow-hidden group">
-                    <div className="relative w-full h-64 md:h-96">
+                    <div className="relative w-full h-56 sm:h-64 md:h-96">
                       <Image
                         src="/images/hero.jpg"
                         alt={project.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 75vw, 40vw"
                       />
                     </div>
                     <div className="p-6 space-y-3">
-                      <h3 className="text-2xl font-semibold text-[#4a5261]">{project.title}</h3>
-                      <p className="text-gray-600 text-sm">{project.description}</p>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-[#4a5261]">{project.title}</h3>
+                      <p className="text-sm sm:text-base text-gray-600">{project.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -86,17 +90,17 @@ export default function ProjectPreview() {
           </div>
 
           {/* Arrows */}
-          <div className="flex gap-6">
+          <div className="flex gap-6 justify-start sm:justify-end">
             <button
               onClick={scrollPrev}
-              className="text-[#4a5261] font-bold text-lg hover:opacity-70 transition"
+              className="text-[#4a5261] font-bold text-base hover:opacity-70 transition"
               aria-label="Previous"
             >
               ← Prev
             </button>
             <button
               onClick={scrollNext}
-              className="text-[#4a5261] font-bold text-lg hover:opacity-70 transition"
+              className="text-[#4a5261] font-bold text-base hover:opacity-70 transition"
               aria-label="Next"
             >
               Next →

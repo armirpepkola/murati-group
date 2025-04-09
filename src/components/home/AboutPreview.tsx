@@ -1,53 +1,62 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { Button } from "../Button";
+import Image from 'next/image';
+import { Button } from '../Button';
 
 const AboutPreview = () => {
   return (
-    <section className="py-32 px-4 sm:px-8 lg:px-16 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="bg-white px-4 py-32 sm:px-6 md:px-8 lg:px-16">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE – Text */}
         <div>
-          <h2 className="text-2xl md:text-4xl font-condensed font-bold text-[#4a5261] leading-tight uppercase mb-4">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-condensed font-bold uppercase leading-tight text-[#4a5261]">
             <span className="block whitespace-nowrap">Built on Trust.</span>
             <span className="block font-normal whitespace-nowrap">Powered by Experience.</span>
           </h2>
 
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="mb-6 text-base sm:text-lg text-gray-700">
             We’re a London-based construction company with a legacy of quality craftsmanship and reliable service.
             From residential builds to commercial developments, we bring passion and precision to every project.
           </p>
-          <Button href="/projects" variant="primary">about murati</Button>
+
+          <Button href="/projects" variant="primary">
+            ABOUT MURATI
+          </Button>
         </div>
 
         {/* RIGHT SIDE – Image Grid */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
-          {/* Left tall image (spans 2 rows) */}
-          <div className="relative row-span-2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-5">
+          {/* Left tall image */}
+          <div className="relative row-span-2 h-[300px] sm:h-[400px] lg:h-auto overflow-hidden rounded">
             <Image
               src="/images/hero.jpg"
-              alt="About Murati"
+              alt="Our team in action on site"
               fill
-              className="object-cover rounded"
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
             />
           </div>
 
-          {/* Right side: 2 stacked squares */}
-          <div className="relative h-full min-h-[150px]">
+          {/* Right top image */}
+          <div className="relative h-[140px] sm:h-[180px] overflow-hidden rounded">
             <Image
               src="/images/hero.jpg"
-              alt="Construction Team"
+              alt="Experienced builders"
               fill
-              className="object-cover rounded"
+              className="object-cover"
+              sizes="(max-width: 1024px) 50vw, 25vw"
             />
           </div>
-          <div className="relative h-full min-h-[150px]">
+
+          {/* Right bottom image */}
+          <div className="relative h-[140px] sm:h-[180px] overflow-hidden rounded">
             <Image
               src="/images/hero.jpg"
-              alt="Project Site"
+              alt="Construction site"
               fill
-              className="object-cover rounded"
+              className="object-cover"
+              sizes="(max-width: 1024px) 50vw, 25vw"
             />
           </div>
         </div>
