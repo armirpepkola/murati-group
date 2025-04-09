@@ -3,8 +3,8 @@ import Story from '@/components/about/Story';
 import Team from '@/components/about/Team';
 import Values from '@/components/about/Values';
 import AboutTestimonials from '@/components/about/AboutTestimonials';
-import CTA from '@/components/home/CTA';
 import PageHero from '@/components/PageHero';
+import CTA from '@/components/CTA';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -23,7 +23,14 @@ export default function AboutPage() {
       <Team />
       <Values />
       <AboutTestimonials />
-      <CTA />
+      <CTA
+        image="/images/hero.jpg"
+        quote='Murati Group'
+        title="Need to reach us?"
+        subtitle="Let's Talk"
+        buttonText="Get in touch"
+        link="/contact"
+      />
     </main>
   );
 }

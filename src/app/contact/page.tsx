@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import CTA from "@/components/home/CTA";
 import ContactSection from "@/components/contact/ContactSection";
 import PageHero from "@/components/PageHero";
+import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Contact Us | Murati Group",
@@ -17,7 +17,14 @@ export default function ContactPage() {
         image="/images/hero.jpg"
       />
       <ContactSection />
-      <CTA />
+      <CTA
+        image="/images/hero.jpg"
+        quote='Murati Group'
+        title="Need to reach us?"
+        subtitle="Let's Talk"
+        buttonText="Get in touch"
+        link="/contact"
+      />
     </main>
   );
 }
