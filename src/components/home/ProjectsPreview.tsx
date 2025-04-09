@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
+import { Button } from '../Button';
 
 type Project = {
   title: string;
@@ -50,12 +50,7 @@ export default function ProjectPreview() {
             We don’t just build — we transform. These are a few of our signature works across London that raised the bar.
           </p>
 
-          <Link
-            href="/projects"
-            className="inline-block px-6 py-3 uppercase bg-[#4a5261] text-white text-sm font-bold hover:bg-opacity-90 transition"
-          >
-            View All Projects
-          </Link>
+          <Button href="/services" variant="secondary">view all projects</Button>
         </div>
 
         {/* RIGHT COLUMN */}

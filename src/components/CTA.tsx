@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { Button } from './Button';
 
 interface CTAProps {
     image: string;
@@ -47,11 +47,9 @@ export default function CTA({
                         <h3 className="mb-5 text-3xl font-bold leading-snug text-[#4a5261]">
                             {title}
                         </h3>
-                        <Link href={link}>
-                            <button className="self-start rounded-none bg-[#e25858] px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition-transform duration-200 hover:scale-105 hover:bg-[#cc4646]">
-                                {buttonText}
-                            </button>
-                        </Link>
+                        <div>
+                            <Button href="/projects" variant="primary">{buttonText}</Button>
+                        </div>
                     </div>
                 </div>
             </div>

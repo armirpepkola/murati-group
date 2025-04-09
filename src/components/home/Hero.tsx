@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { Button } from '../Button';
 
 export default function Hero() {
   return (
@@ -28,18 +28,8 @@ export default function Hero() {
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/projects"
-              className="bg-[#e25858] hover:bg-red-600 transition text-white uppercase font-semibold px-4 py-1.5 rounded-none shadow"
-            >
-              see our work
-            </Link>
-            <Link
-              href="/services"
-              className="bg-[#1f1f1f] hover:bg-black transition text-white uppercase font-semibold px-4 py-1.5 rounded-none shadow"
-            >
-              our services
-            </Link>
+            <Button href="/projects" variant="primary">see our work</Button>
+            <Button href="/services" variant="secondary">our services</Button>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import { Button } from "../Button";
 
 const AboutPreview = () => {
   return (
@@ -18,12 +18,7 @@ const AboutPreview = () => {
             We’re a London-based construction company with a legacy of quality craftsmanship and reliable service.
             From residential builds to commercial developments, we bring passion and precision to every project.
           </p>
-          <Link
-            href="/about"
-            className="inline-block bg-[#e25858] text-white uppercase tracking-wide font-semibold px-4.5 py-2 hover:bg-[#4a5261] transition-colors"
-          >
-            About Murati
-          </Link>
+          <Button href="/projects" variant="primary">about murati</Button>
         </div>
 
         {/* RIGHT SIDE – Image Grid */}

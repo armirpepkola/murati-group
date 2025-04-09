@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { Button } from './Button'
 
 const navLinks = [
   { label: 'About', href: '/about' },
@@ -99,12 +100,7 @@ export default function Header() {
           </nav>
 
           {/* Call-to-Action Button */}
-          <Link
-            href="/contact"
-            className="bg-[#1f1f1f] hover:bg-black transition text-white uppercase font-semibold px-6 py-2 rounded-none shadow"
-          >
-            Call an expert
-          </Link>
+          <Button href="/services" variant="secondary">call an expert</Button>
 
           {/* Mobile Menu Toggle */}
           <button

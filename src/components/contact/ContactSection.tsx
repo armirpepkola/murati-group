@@ -110,7 +110,7 @@ export default function ContactSection() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="w-full bg-[#e25858] text-white py-3 font-bold uppercase rounded hover:bg-[#d14c4c] transition disabled:opacity-60"
+            className="w-full bg-[#e25858] text-white py-3 font-bold uppercase rounded hover:bg-red-600 transition disabled:opacity-60"
           >
             {loading ? "Sending..." : "Send Message"}
           </motion.button>
