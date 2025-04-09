@@ -9,10 +9,12 @@ export default function ProjectsGallery() {
   const [activeImages, setActiveImages] = useState<string[] | null>(null);
 
   return (
-    <section className="px-16 py-32 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-[#4a5261] mb-12">Our Projects</h2>
+    <section className="px-4 sm:px-6 lg:px-16 py-20 sm:py-28 max-w-7xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl font-bold text-[#4a5261] mb-10 sm:mb-12 uppercase">
+        Our Projects
+      </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}

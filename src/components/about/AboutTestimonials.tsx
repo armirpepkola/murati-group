@@ -23,19 +23,19 @@ const testimonials = [
 
 export default function AboutTestimonials() {
   return (
-    <section className="bg-[#4a5261] py-32 px-6 overflow-hidden mb-32">
+    <section className="bg-[#4a5261] py-20 sm:py-28 px-4 sm:px-6 overflow-hidden mb-20 sm:mb-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center text-white text-4xl font-bold mb-12"
+        className="text-center text-white text-3xl sm:text-4xl font-bold mb-10 sm:mb-12"
       >
         What Our Clients Say
       </motion.h2>
 
       <div className="relative">
-        <div className="flex gap-8 animate-slide-loop">
+        <div className="flex gap-6 sm:gap-8 animate-slide-loop">
           {[...testimonials, ...testimonials].map(({ quote, name }, i) => (
             <motion.div
               key={i}
@@ -43,11 +43,11 @@ export default function AboutTestimonials() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white text-[#4a5261] w-[90vw] md:w-[400px] px-6 py-8 rounded-xl shadow-lg relative whitespace-normal shrink-0"
+              className="bg-white text-[#4a5261] w-[85vw] sm:w-[70vw] md:w-[400px] px-5 sm:px-6 py-6 sm:py-8 rounded-xl shadow-lg relative whitespace-normal shrink-0"
             >
-              <Quote className="absolute top-4 left-4 text-[#e25858]" size={28} />
-              <p className="italic text-lg leading-relaxed mt-6">“{quote}”</p>
-              <p className="mt-4 font-semibold text-[#e25858] text-right">— {name}</p>
+              <Quote className="absolute top-4 left-4 text-[#e25858]" size={24} />
+              <p className="italic text-base sm:text-lg leading-relaxed mt-6">“{quote}”</p>
+              <p className="mt-4 font-semibold text-[#e25858] text-right text-sm sm:text-base">— {name}</p>
             </motion.div>
           ))}
         </div>

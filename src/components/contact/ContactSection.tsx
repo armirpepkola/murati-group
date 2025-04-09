@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
@@ -31,7 +31,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#f9f9f9] to-[#ececec] px-6 py-32 sm:px-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f9f9f9] to-[#ececec] px-4 sm:px-6 lg:px-16 py-20 sm:py-28">
       <Toaster position="top-center" />
       {/* Background SVG noise */}
       <div
@@ -44,7 +44,7 @@ export default function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative max-w-6xl mx-auto grid md:grid-cols-[1fr_auto_1fr] gap-12 z-10"
+        className="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-12 z-10"
       >
         {/* INFO COLUMN */}
         <div className="pl-6 border-l-4 border-[#e25858] space-y-8">
