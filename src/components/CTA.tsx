@@ -37,7 +37,7 @@ export default function CTA({
                         />
                         <div className="absolute inset-0 bg-black/40" />
                         <div className="relative z-10 h-full flex items-center justify-start pl-40 text-white">
-                            <h2 className="text-4xl font-bold uppercase">{quote}</h2>
+                            <h2 className="text-4xl font-bold uppercase pr-37">{quote}</h2>
                         </div>
                     </div>
 

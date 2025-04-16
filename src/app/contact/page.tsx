@@ -14,16 +14,16 @@ export default function ContactPage() {
       <PageHero
         title="How can we help?"
         subtitle="Let's Talk"
-        image="/images/hero.jpg"
+        image="/images/contact/contact-hero.jpg"
       />
       <ContactSection />
       <CTA
-        image="/images/hero.jpg"
-        quote='Murati Group'
-        title="Need to reach us?"
+        image="/images/contact/contact-cta.jpg"
+        quote='Every great build starts with a conversation'
+        title="Let's plan something great."
         subtitle="Let's Talk"
         buttonText="Get in touch"
-        link="/contact"
+        link="tel:+447700900900"
       />
     </main>
   );

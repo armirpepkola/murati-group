@@ -33,7 +33,7 @@ export default function Values() {
         >
           <div className="relative w-full h-[500px] overflow-hidden [clip-path:polygon(0_0,100%_10%,100%_100%,0_90%)] shadow-xl">
             <Image
-              src="/images/hero.jpg"
+              src="/images/about/values.jpg"
               alt="Cut angle image"
               fill
               className="object-cover"

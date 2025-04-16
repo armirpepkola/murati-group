@@ -21,10 +21,10 @@ export default function ContactSection() {
       await new Promise((res) => setTimeout(res, 1000));
       if (!name || !email || !message) throw new Error("Missing fields");
 
-      toast.success("Message sent successfully!");
+      toast.success("info@muratigroup.co.uk");
       e.currentTarget.reset();
     } catch (error) {
-      toast.error("Something went wrong. Try again.");
+      toast.error("This form is under construction. Please email at the address below.");
     } finally {
       setLoading(false);
     }
@@ -61,7 +61,7 @@ export default function ContactSection() {
               <MapPin className="text-[#e25858] mt-1" />
               <div>
                 <p className="font-semibold">Head Office</p>
-                <p>123 Builder’s Lane, London, UK</p>
+                <p>London, UK</p>
               </div>
             </div>
 
@@ -72,13 +72,13 @@ export default function ContactSection() {
 
             <div className="flex items-center gap-3">
               <Phone className="text-[#e25858]" />
-              <a href="tel:+442012345678" className="hover:underline">+44 20 1234 5678</a>
+              <a href="tel:+447827013968" className="hover:underline">+44 7827 013968</a>
             </div>
 
             <div className="pt-2">
               <p className="font-semibold">Working Hours</p>
               <p>Mon – Fri: 8:00am – 6:00pm</p>
-              <p>Sat: 9:00am – 2:00pm</p>
+              <p>Sat: 9:00am – 4:00pm</p>
             </div>
           </div>
         </div>

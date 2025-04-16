@@ -34,7 +34,7 @@ export default function Story() {
         >
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/images/hero.jpg"
+              src="/images/about/about-subhero.jpg"
               alt="Construction site"
               fill
               className="object-cover"

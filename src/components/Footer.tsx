@@ -40,14 +40,19 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-4">Contact</h4>
           <address className="not-italic space-y-2 opacity-80">
-            <p>📞 +44 20 7946 0958</p>
+            <p>
+              📞{" "}
+              <a href="tel:+447827013968" className="hover:underline">
+                +44 7827 013968
+              </a>
+            </p>
             <p>
               ✉️{" "}
               <a href="mailto:info@muratigroup.co.uk" className="hover:underline">
                 info@muratigroup.co.uk
               </a>
             </p>
-            <p>🏢 123 Builder St, London, UK</p>
+            <p>🏢 London, UK</p>
           </address>
         </div>
 

@@ -2,26 +2,26 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Wrench, Expand, Home } from 'lucide-react';
+import { Expand, Hammer, Landmark } from 'lucide-react';
 
 const services = [
   {
-    title: 'Renovations',
-    desc: 'We handle complete residential and commercial transformations with precision.',
-    features: ['Kitchen & Bath', 'Flooring', 'Painting'],
-    icon: Wrench,
+    title: 'Home Extensions & Loft Conversions',
+    desc: 'Maximize your space with structural enhancements that blend strength and style.',
+    features: ['Extensions', 'Renovations', 'Conversions'],
+    icon: Hammer,
   },
   {
-    title: 'Extensions',
-    desc: 'Expand your home with beautifully integrated extensions and add-ons.',
-    features: ['Side Return', 'Wrap Around', 'Rear Extensions'],
+    title: 'Interior & Exterior Design Services',
+    desc: 'From flow to facade, we design with form, function, and feel in mind.',
+    features: ['Interior Design', 'Exterior Design', 'Landscaping'],
     icon: Expand,
   },
   {
-    title: 'Loft Conversions',
-    desc: 'Maximize unused space and increase property value with stylish lofts.',
-    features: ['Dormer', 'Hip-to-Gable', 'Mansard'],
-    icon: Home,
+    title: 'Specialist Stone Work & Design',
+    desc: 'Timeless craftsmanship. Bespoke stone features built to endure.',
+    features: ['Walls, patios & tiling', 'Kitchen & bathroom countertops', 'Cladding & bespoke features'],
+    icon: Landmark,
   },
 ];
 

@@ -12,15 +12,15 @@ export default function ProjectsPage() {
   return (
     <main className="flex flex-col">
       <PageHero
-        title="See some of our best works"
+        title="See our best works"
         subtitle="Projects"
-        image="/images/hero.jpg"
+        image="/images/projects/projects-hero.jpg"
       />
       <ProjectsGallery />
       <CTA
-        image="/images/hero.jpg"
-        quote='Murati Group'
-        title="Need to reach us?"
+        image="/images/projects/projects-cta.jpg"
+        quote='The best way to judge our work is to stand inside it'
+        title="Inspired by our work?"
         subtitle="Let's Talk"
         buttonText="Get in touch"
         link="/contact"

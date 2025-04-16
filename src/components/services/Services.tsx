@@ -16,6 +16,7 @@ const services = [
       "Structural planning & builds",
       "Modern upgrades & finishes",
     ],
+    background: "/images/services/extension.jpg",
   },
   {
     id: "lofts",
@@ -27,6 +28,7 @@ const services = [
       "Staircase integration",
       "Full insulation & compliance",
     ],
+    background: "/images/services/conversion.jpg",
   },
   {
     id: "interior",
@@ -38,6 +40,7 @@ const services = [
       "Lighting & layout optimization",
       "Material & fixture selection",
     ],
+    background: "/images/services/interior.jpg",
   },
   {
     id: "exterior",
@@ -49,6 +52,7 @@ const services = [
       "Driveways, paths & fencing",
       "Planting schemes & lighting",
     ],
+    background: "/images/services/exterior.jpg",
   },
   {
     id: "stone",
@@ -60,6 +64,7 @@ const services = [
       "Stone restoration",
       "Cladding & bespoke features",
     ],
+    background: "/images/services/stone.jpg",
   },
 ];
 
@@ -118,15 +123,17 @@ export default function Services() {
             </div>
 
             {/* Image */}
-            <div className="w-full md:w-1/2 h-64 sm:h-[22rem] md:h-[26rem] relative rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/hero.jpg"
-                alt={service.title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/25 backdrop-blur-[1px]" />
-            </div>
+            {service.background && (
+              <div className="w-full md:w-1/2 h-64 sm:h-[22rem] md:h-[26rem] relative rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src={service.background}
+                  alt={service.title}
+                  fill
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black/5" />
+              </div>
+            )}
           </motion.article>
         ))}
       </div>

@@ -48,16 +48,16 @@ export default function Header() {
             <span className="block md:hidden">For inquiries send us your documents at:</span>
             <span className="hidden md:block">For inquiries or projects send us your documents at:</span>
             <a
-              href="mailto:info@muratigroup.com"
+              href="mailto:info@muratigroup.co.uk"
               className="text-[#e25858] underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-[#e25858]"
             >
-              info@muratigroup.com
+              info@muratigroup.co.uk
             </a>
           </div>
 
           {/* Working Days - hidden on mobile */}
           <div className="hidden md:flex items-center">
-            <span>Working days: Mon - Fri</span>
+            <span>Working days: Mon - Sat</span>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function Header() {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Button href="/services" variant="secondary">
+            <Button href="tel:+447827013968" variant="secondary">
               call an expert
             </Button>
           </div>
@@ -148,7 +148,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button href="/services" variant="secondary">
+                <Button href="tel:+447827013968" variant="secondary">
                   call an expert
                 </Button>
               </div>

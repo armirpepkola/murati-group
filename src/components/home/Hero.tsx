@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src="/images/home/home-hero.jpg"
           alt="Construction workers on site"
           fill
           priority
@@ -24,9 +24,9 @@ export default function Hero() {
       <div className="section h-full flex flex-col relative z-10 px-4 sm:px-6 md:px-8 lg:px-16">
         <div className="mt-auto mb-16 md:mb-24 lg:mb-32 max-w-full sm:max-w-xl md:max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-condensed font-bold leading-tight mb-6 sm:mb-8">
-            <span className="text-white uppercase block">Superior results.</span>
+            <span className="text-white uppercase block">Building Excellence.</span>
             <span className="font-normal text-white uppercase block md:inline">
-              Great experience for everyone.
+              London’s Trusted Builders.
             </span>
           </h1>
 

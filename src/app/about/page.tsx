@@ -17,16 +17,16 @@ export default function AboutPage() {
       <PageHero
         title="Who we are"
         subtitle="About"
-        image="/images/hero.jpg"
+        image="/images/about/about-hero.jpg"
       />
       <Story />
       <Team />
       <Values />
       <AboutTestimonials />
       <CTA
-        image="/images/hero.jpg"
-        quote='Murati Group'
-        title="Need to reach us?"
+        image="/images/about/about-cta.jpg"
+        quote='Behind every build is a team that listens, plans, and delivers.'
+        title="Want to work with us?"
         subtitle="Let's Talk"
         buttonText="Get in touch"
         link="/contact"

@@ -29,7 +29,7 @@ const AboutPreview = () => {
           {/* Left tall image */}
           <div className="relative row-span-2 h-[300px] sm:h-[400px] lg:h-auto overflow-hidden rounded">
             <Image
-              src="/images/hero.jpg"
+              src="/images/home/about-stonework.jpg"
               alt="Our team in action on site"
               fill
               className="object-cover"
@@ -41,7 +41,7 @@ const AboutPreview = () => {
           {/* Right top image */}
           <div className="relative h-[140px] sm:h-[180px] overflow-hidden rounded">
             <Image
-              src="/images/hero.jpg"
+              src="/images/home/about-extension.jpg"
               alt="Experienced builders"
               fill
               className="object-cover"
@@ -52,7 +52,7 @@ const AboutPreview = () => {
           {/* Right bottom image */}
           <div className="relative h-[140px] sm:h-[180px] overflow-hidden rounded">
             <Image
-              src="/images/hero.jpg"
+              src="/images/home/about-renovation.jpg"
               alt="Construction site"
               fill
               className="object-cover"

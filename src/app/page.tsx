@@ -23,8 +23,8 @@ export default function HomePage() {
       <WhyChooseUs />
       <Testimonials />
       <CTA
-        image="/images/hero.jpg"
-        quote='Murati Group'
+        image="/images/home/home-cta.jpg"
+        quote='Let’s build something that outlasts trends — and expectations.'
         title="Need to reach us?"
         subtitle="Let's Talk"
         buttonText="Get in touch"

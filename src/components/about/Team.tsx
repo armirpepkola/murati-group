@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const team = [
-  { name: "John Carter", role: "Project Manager", img: "/images/hero.jpg" },
-  { name: "Sarah Khan", role: "Architect", img: "/images/hero.jpg" },
-  { name: "Liam Patel", role: "Site Supervisor", img: "/images/hero.jpg" },
-  { name: "Nina Costa", role: "Civil Engineer", img: "/images/hero.jpg" },
+  { name: "John Carter", role: "Project Manager", img: "/images/about/team-sample.jpg" },
+  { name: "Sarah Khan", role: "Architect", img: "/images/about/team-sample.jpg" },
+  { name: "Liam Patel", role: "Site Supervisor", img: "/images/about/team-sample.jpg" },
+  { name: "Nina Costa", role: "Civil Engineer", img: "/images/about/team-sample.jpg" },
 ];
 
 export default function Team() {
