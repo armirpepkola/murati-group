@@ -147,6 +147,11 @@ export default function Header() {
                   {label}
                 </Link>
               ))}
+              <div className="pt-2">
+                <Button href="/services" variant="secondary">
+                  call an expert
+                </Button>
+              </div>
             </div>
           </nav>
         )}
