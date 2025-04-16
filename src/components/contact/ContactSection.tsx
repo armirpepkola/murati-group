@@ -24,6 +24,7 @@ export default function ContactSection() {
       toast.success("info@muratigroup.co.uk");
       e.currentTarget.reset();
     } catch (error) {
+      console.error(error);
       toast.error("This form is under construction. Please email at the address below.");
     } finally {
       setLoading(false);

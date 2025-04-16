@@ -21,7 +21,7 @@ export default function Story() {
             respect for the craft.
           </p>
           <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-700 leading-7 sm:leading-8">
-            Rooted in London, we combine traditional values with cutting-edge techniques. Whether it's a modern commercial build
+            Rooted in London, we combine traditional values with cutting-edge techniques. Whether it&apos;s a modern commercial build
             or a classic residential restoration, our commitment stays the same: <span className="text-[#e25858] font-semibold">excellence without compromise</span>.
           </p>
         </motion.div>
