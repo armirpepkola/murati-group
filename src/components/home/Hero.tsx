@@ -30,11 +30,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button href="/projects" variant="primary">
+          <div className="flex flex-row flex-wrap gap-4 w-full">
+            <Button href="/projects" variant="primary" className="w-fit">
               see our work
             </Button>
-            <Button href="/services" variant="secondary">
+            <Button href="/services" variant="secondary" className="w-fit">
               our services
             </Button>
           </div>

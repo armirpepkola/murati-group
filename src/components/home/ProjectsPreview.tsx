@@ -42,7 +42,7 @@ export default function ProjectPreview() {
         {/* LEFT COLUMN */}
         <div>
           <p className="text-[#e25858] uppercase text-sm font-bold tracking-wide mb-2">Projects</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4a5261] mb-4 uppercase">
+          <h2 className="text-xl sm:text-4xl font-bold text-[#4a5261] mb-4 uppercase">
             Building Landmarks,<br className="hidden md:block" />
             One Structure at a Time
           </h2>
@@ -57,8 +57,8 @@ export default function ProjectPreview() {
 
         {/* RIGHT COLUMN */}
         <div className="flex flex-col gap-6">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex -ml-4 sm:-ml-0">
+          <div className="overflow-hidden pr-4 lg:pr-24" ref={emblaRef}>
+            <div className="flex -ml-4 sm:-ml-0 mb-2">
               {featuredProjects.map((project, idx) => (
                 <motion.div
                   key={project.slug}
@@ -67,7 +67,7 @@ export default function ProjectPreview() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 + idx * 0.1 }}
-                  className="min-w-0 w-full md:min-w-[85%] flex-shrink-0 pl-4 sm:pl-0 pr-4"
+                  className="min-w-0 w-[92%] md:w-[90%] lg:w-[95%] flex-shrink-0 pl-4 sm:pl-0 pr-4"
                 >
                   <div className="bg-white rounded-2xl shadow-md overflow-hidden group">
                     <div className="relative w-full h-56 sm:h-64 md:h-96">
